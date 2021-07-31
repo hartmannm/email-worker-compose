@@ -4,6 +4,8 @@ volumes:
 services:
     db: 
         image: postgres:9.6
+        environment:
+            POSTGRES_PASSWORD: "root"
         volumes:
             - dados:/var/lib/postgressql/data
             - ./scripts:/scripts
